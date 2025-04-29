@@ -1,4 +1,3 @@
-// src/components/CollectionDialogs.jsx
 import React from "react";
 import { Dialog, DialogTitle, DialogContent, DialogActions, Button, Box, Typography } from "@mui/material";
 import { labelMap } from "../datasets/labels"; // you still need labelMap!

@@ -6,7 +6,7 @@ import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import { predictFileLabels } from "../utils/chatPredictionHandler";
 import { labelMap } from "../datasets/labels";
 
-const Footer = ({ authStatus, currentUser }) => {
+const Footer = ({ authStatus }) => {
   const [expanded, setExpanded] = useState(false);
   const [message, setMessage] = useState("");
   const [messages, setMessages] = useState([]);
