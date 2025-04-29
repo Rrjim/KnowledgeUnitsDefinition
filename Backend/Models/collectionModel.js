@@ -1,7 +1,6 @@
 const { Sequelize, DataTypes, Model } = require('sequelize');
 const sequelize = new Sequelize('postgres://user:password@localhost:5432/mydb'); // your connection string
 
-// Define the Collection Model
 class Collection extends Model {}
 Collection.init({
   collectionName: {
@@ -43,7 +42,6 @@ Collection.init({
   timestamps: true,
 });
 
-// Define the CollectionFile Model (Many-to-Many relationship with File)
 class CollectionFile extends Model {}
 CollectionFile.init({
   collectionId: {

@@ -68,7 +68,7 @@ export const registerUser = async (req, res) => {
 
 export const loginGoogle = (req, res) => {
   if (!req.user) {
-      return res.redirect("http://localhost:5174/login");
+      return res.redirect("http://localhost:5174/portal");
   } else {
 
   req.session.user = new UserResponseDTO(req.user, true);

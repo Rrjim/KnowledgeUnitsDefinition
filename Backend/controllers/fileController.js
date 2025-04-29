@@ -165,4 +165,20 @@ const getRepoIdAndLanguage = async (owner, repoName) => {
     }
   };
   
+  export const setLabelFiles = async (req, res) => {
+    const fileId = req.params.id;
+    const { labels } = req.body;
+    console.log(fileId);
+    console.log(req.body);
+    try {
+      const result = await db.query(
+        `UPDATE files SET labels = $1 WHERE id = $2 RETURNING *`,
+        [labels, fileId]
+      );
+      res.status(200).json(result.rows[0]);
+    } catch (err) {
+      console.error("Error updating labels:", err);
+      res.status(500).json({ error: "Failed to update labels" });
+    }
+  };
   
