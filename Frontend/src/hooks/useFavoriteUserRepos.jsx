@@ -35,7 +35,7 @@ const useFavoriteUserRepos = (currentUser) => {
   // Fetch the liked repositories when currentUser changes
   useEffect(() => {
     fetchLikedRepos();
-  }, [currentUser, fetchLikedRepos]);
+  }, [currentUser]); // fetchLikedRepos removed
 
   return {
     likedRepos,

@@ -44,7 +44,7 @@ const useStandaloneFiles = (currentUser) => {
     if (currentOwner) {
       fetchAddedFiles();
     }
-  }, [currentOwner, fetchAddedFiles]);
+  }, [currentOwner]); // fetchAddedFiles removed
 
   const handleClick = (ownerName) => {
     setCurrentOwner((prevOwner) => (prevOwner === ownerName ? null : ownerName));

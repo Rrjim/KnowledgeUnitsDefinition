@@ -27,9 +27,9 @@ const useLikedRepos = (currentUser) => {
 
   useEffect(() => {
     fetchLikedRepos();
-  }, [fetchLikedRepos]);
+  }, [currentUser]); //fetchLikedRepos removed
 
-  return { likedRepos, error, fetchLikedRepos };
+  return { likedRepos, error }; // fetchLikedRepos removed
 };
 
 export default useLikedRepos;

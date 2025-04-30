@@ -87,9 +87,9 @@ const Footer = ({ authStatus }) => {
       sx={{
         position: "fixed",
         bottom: 0,
-        left: "50%",
+        left: "80%",
         transform: "translateX(-50%)",
-        width: 400,
+        width: 360,
         backgroundColor: "#fff",
         borderRadius: expanded ? 3 : "16px 16px 0 0",
         boxShadow: 6,

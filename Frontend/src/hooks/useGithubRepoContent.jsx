@@ -8,6 +8,8 @@ const useRepoFiles = (username, repoName, repoId, currentUser) => {
 
   // Memoized version of fetchRepoFiles
   const fetchRepoFiles = useCallback(async () => {
+    console.log("Fetching repo files..."); 
+
     setLoading(true);
     setError("");
 
@@ -71,7 +73,7 @@ const useRepoFiles = (username, repoName, repoId, currentUser) => {
   // Only re-run when either repoName or repoId changes
   useEffect(() => {
     loadFiles();
-  }, [repoName, repoId, loadFiles]);
+  }, [repoName, repoId]); // loadFiles removed from useEffect parameters 
 
   return { jsFiles, loading, error };
 };
